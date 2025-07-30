@@ -4,4 +4,17 @@
          to allow setting breakpoints, to provide hot reload, etc.
     -->
     <uses-permission android:name="android.permission.INTERNET"/>
+    
+    <!-- Bluetooth permissions - Legacy (API < 31) -->
+    <uses-permission android:name="android.permission.BLUETOOTH" android:maxSdkVersion="30" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" android:maxSdkVersion="30" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" android:maxSdkVersion="30" />
+    
+    <!-- Bluetooth permissions - Modern (API 31+) -->
+    <uses-permission android:name="android.permission.BLUETOOTH_SCAN" />
+    <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADVERTISE" />
+    
+    <!-- Location permission (required for some Bluetooth operations) -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 </manifest>
